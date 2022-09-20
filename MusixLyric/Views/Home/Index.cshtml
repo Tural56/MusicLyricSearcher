@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<LyricList>
+
+<div>
+    <form class="form-inline" method="post">
+        
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Music</label>
+            <input type="text" name="Name" class="form-control" id="inputPassword2" placeholder="Music">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+    </form>
+</div>
+<div class="text-center">
+    
+    @{
+        if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-left" srcset="@item.img_link" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">@item.Group_Name</p>
+                        <form method="get" asp-action="GetDetail">
+                                <button class="btn btn-primary" type="submit" name="Link" value="@item.link">Go To Lyric</button>
+                                
+                        </form>
+                        
+                      </div>
+                    </div>
+            }
+        }
+        
+    }
+    
+</div>

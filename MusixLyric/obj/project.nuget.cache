@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "E5X92Vzf5/scuD1yMuSYbPUvF18QSF8PJeX52fJ7aL6xyjmr9fMHD6jUKgFn3qLyawk19CmtDEXfiIkRiBVBCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tural\\source\\repos\\MusixLyric\\MusixLyric\\MusixLyric.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tural\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+  ],
+  "logs": []
+}
