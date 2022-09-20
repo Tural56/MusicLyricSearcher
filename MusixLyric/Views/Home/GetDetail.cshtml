@@ -8,13 +8,16 @@
 <head>
     <link rel="stylesheet" href="~/css/style.css" />
 </head>
-
-<div class="mxm-lyrics__content">
-    <h1>@Model.Name</h1>
-    <h2>@Model.Group_name</h2>
-    <h4>@Model.Update_time</h4>
+@{if (Model != null)
+{
+   <div class="mxm-lyrics__content">
+        <h1>@Model.Name</h1>
+        <h2>@Model.Group_name</h2>
+        <h4>@Model.Update_time</h4>
     
-    <h3>@Model.Header_Lyric</h3>
-    <h3>@Model.Main_Lyric</h3>
+        <h3>@Model.Header_Lyric</h3>
+        <h3>@Model.Main_Lyric</h3>
 
-</div>
+    </div> 
+}}
+
