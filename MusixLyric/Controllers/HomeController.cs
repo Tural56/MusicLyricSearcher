@@ -23,12 +23,20 @@ namespace MusixLyric.Controllers
         public IActionResult Index(string Name)
         {
             var items = LyricListSender.getLyricList(Name);
+            if (items == null)
+            {
+                return NotFound();
+            }
             return View(items);
         }
 
         public IActionResult GetDetail(string Link)
         {
             var lyric = LyricSender.getLyric(Link);
+            if (lyric == null)
+            {
+                return NotFound();
+            }
             return View(lyric);
         }
         public IActionResult Privacy()
