@@ -17,11 +17,17 @@ namespace MusixLyric.Models
             var lyric_groupname = doc.DocumentNode.SelectSingleNode("/html/body/div[2]/div/div/div/main/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/h2/span/a").InnerText;
 
             Lyric res = new Lyric();
-            res.Name = lyric_name;
-            res.Header_Lyric = lyric_header;
-            res.Main_Lyric = lyric_main;
-            res.Update_time = lyric_updatetime;
-            res.Group_name = lyric_groupname;
+            if (lyric_name != null)
+            {
+                
+                res.Name = lyric_name;
+                res.Header_Lyric = lyric_header;
+                res.Main_Lyric = lyric_main;
+                res.Update_time = lyric_updatetime;
+                res.Group_name = lyric_groupname;
+                return res;
+            }
+            
             
             return res;
         }

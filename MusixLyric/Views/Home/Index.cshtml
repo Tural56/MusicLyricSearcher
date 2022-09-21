@@ -20,21 +20,22 @@
         {
             foreach (var item in Model)
             {
-                    <div class="card" style="width: 18rem;">
-                      <img class="card-img-left" srcset="@item.img_link" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">@item.Name</h5>
-                        <p class="card-text">@item.Group_Name</p>
-                        <form method="get" asp-action="GetDetail">
+                <div class="card" style="width: 18rem; display:inline-flex; margin: 40px 20px; border-radius:5px;">
+                        <img class="card-img-left" srcset="@item.img_link" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Group_Name</p>
+                            <form method="get" asp-action="GetDetail">
                                 <button class="btn btn-primary" type="submit" name="Link" value="@item.link">Go To Lyric</button>
-                                
-                        </form>
-                        
-                      </div>
+
+                            </form>
+
+                        </div>
                     </div>
             }
         }
-        
+
     }
+    
     
 </div>
